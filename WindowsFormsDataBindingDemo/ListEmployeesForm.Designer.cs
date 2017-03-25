@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsDataBindingDemo
 {
-    partial class ListEmployees
+    partial class ListEmployeesForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,6 +32,7 @@
             this.dataGridViewEmployees = new System.Windows.Forms.DataGridView();
             this.btnAddEmployee = new System.Windows.Forms.Button();
             this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblLoggedInUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -58,19 +59,29 @@
             // 
             this.employeeBindingSource.DataSource = typeof(WindowsFormsDataBindingDemo.Models.Employee);
             // 
-            // ListEmployees
+            // lblLoggedInUser
+            // 
+            this.lblLoggedInUser.AutoSize = true;
+            this.lblLoggedInUser.Location = new System.Drawing.Point(685, 12);
+            this.lblLoggedInUser.Name = "lblLoggedInUser";
+            this.lblLoggedInUser.Size = new System.Drawing.Size(0, 13);
+            this.lblLoggedInUser.TabIndex = 2;
+            // 
+            // ListEmployeesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 325);
+            this.ClientSize = new System.Drawing.Size(822, 325);
+            this.Controls.Add(this.lblLoggedInUser);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.dataGridViewEmployees);
-            this.Name = "ListEmployees";
+            this.Name = "ListEmployeesForm";
             this.Text = "List Employees";
             this.Load += new System.EventHandler(this.ListEmployees_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -79,6 +90,7 @@
         private System.Windows.Forms.DataGridView dataGridViewEmployees;
         private System.Windows.Forms.BindingSource employeeBindingSource;
         private System.Windows.Forms.Button btnAddEmployee;
+        private System.Windows.Forms.Label lblLoggedInUser;
     }
 }
 

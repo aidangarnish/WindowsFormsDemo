@@ -48,27 +48,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreateEmployee.cs">
+    <Compile Include="CreateEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CreateEmployee.Designer.cs">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    <Compile Include="CreateEmployeeForm.Designer.cs">
+      <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListEmployees.cs">
+    <Compile Include="ListEmployeesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListEmployees.Designer.cs">
-      <DependentUpon>ListEmployees.cs</DependentUpon>
+    <Compile Include="ListEmployeesForm.Designer.cs">
+      <DependentUpon>ListEmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\AppData.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CreateEmployee.resx">
-      <DependentUpon>CreateEmployee.cs</DependentUpon>
+    <EmbeddedResource Include="CreateEmployeeForm.resx">
+      <DependentUpon>CreateEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListEmployees.resx">
-      <DependentUpon>ListEmployees.cs</DependentUpon>
+    <EmbeddedResource Include="ListEmployeesForm.resx">
+      <DependentUpon>ListEmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

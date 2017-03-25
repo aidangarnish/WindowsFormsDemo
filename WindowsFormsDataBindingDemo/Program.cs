@@ -15,13 +15,14 @@ namespace WindowsFormsDataBindingDemo
         /// 
         /// </summary>
         /// 
+        public static Employee currentUser;
 
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ListEmployees());
+            Application.Run(new LoginForm());
         }
     }
 }

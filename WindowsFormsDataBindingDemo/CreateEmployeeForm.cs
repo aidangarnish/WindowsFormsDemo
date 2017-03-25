@@ -6,9 +6,9 @@ using WindowsFormsDataBindingDemo.Models;
 
 namespace WindowsFormsDataBindingDemo
 {
-    public partial class CreateEmployee : Form
+    public partial class CreateEmployeeForm : Form
     {
-        public CreateEmployee()
+        public CreateEmployeeForm()
         {
             InitializeComponent();
         }
@@ -23,16 +23,18 @@ namespace WindowsFormsDataBindingDemo
 
             }
 
-            appData.Employees.Add(new Employee() { Id = 1, FirstName = txtFirstName.Text, LastName = txtLastName.Text, Department = "IS" });
+            appData.Employees.Add(new Employee() { Id = appData.Employees.Count + 1, FirstName = txtFirstName.Text, LastName = txtLastName.Text, Department = "IS", Email = txtEmail.Text, Password = txtPassword.Text });
 
             using (StreamWriter writetext = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\Employees.json"))
             {
                 writetext.WriteLine(JsonConvert.SerializeObject(appData));
             }
 
-            var listEmployeesForm = new ListEmployees();
+            var listEmployeesForm = new ListEmployeesForm();
             listEmployeesForm.Show();
             this.Close();
         }
+
+        
     }
 }
